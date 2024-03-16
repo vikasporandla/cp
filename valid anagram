@@ -1,0 +1,17 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+
+        if len(t)==len(s):
+            for i in t:
+                if i in s:
+                    if t.count(i)!=s.count(i):
+                        return False
+                else:
+                    return False
+            return True
+        return False
